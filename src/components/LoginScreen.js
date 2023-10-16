@@ -18,7 +18,7 @@ function LoginScreen() {
     const { username, password } = loginFormData;
 
     try {
-      const response = await fetch('/api/login', {
+      const response = await fetch('https://trail-track-server.fly.dev/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

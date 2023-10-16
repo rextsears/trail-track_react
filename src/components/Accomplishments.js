@@ -7,7 +7,7 @@ function Accomplishments() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5001/api/activities')
+      .get('https://trail-track-server.fly.dev/api/activities')
       .then((response) => {
         console.log(response);
         const filteredAccomplishments = response.data.filter(
