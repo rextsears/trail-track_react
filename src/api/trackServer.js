@@ -1,39 +1,37 @@
 import axios from 'axios';
 
-const BASE_URL = 'https://trail-track-server.fly.dev/';
-
 // Set up axios to handle cookies
 axios.defaults.withCredentials = true;
 
 // Function to add a new activity
 export const addActivity = (activityData) => {
-  return axios.post(`${BASE_URL}/api/trackServer`, activityData);
+  return axios.post(`https://trail-track-server.fly.dev/api/trackServer`, activityData);
 };
 
 // Function to edit an existing activity
 export const editActivity = (activityId, activityData) => {
-  return axios.put(`${BASE_URL}/api/trackServer/${activityId}`, activityData);
+  return axios.put(`https://trail-track-server.fly.dev/api/trackServer/${activityId}`, activityData);
 };
 
 // Function to delete an activity
 export const deleteActivity = (activityId) => {
-  return axios.delete(`${BASE_URL}/api/trackServer/${activityId}`);
+  return axios.delete(`https://trail-track-server.fly.dev/api/trackServer/${activityId}`);
 };
 
 // Function for user login
 export const login = (userData) => {
-  return axios.post(`${BASE_URL}/api/login`, userData);
+  return axios.post(`https://trail-track-server.fly.dev/api/login`, userData);
 };
 
 // Function for user registration
 export const register = (userData) => {
-  return axios.post(`${BASE_URL}/api/join/register`, userData);
+  return axios.post(`https://trail-track-server.fly.dev/api/join/register`, userData);
 };
 
 // Function to get user details
 export const getUserDetails = async () => {
   try {
-    const response = await axios.get(`${BASE_URL}/api/user/details`);
+    const response = await axios.get(`https://trail-track-server.fly.dev/api/user/details`);
       return response;
   } catch (error) {
       console.error("Failed to fetch user details:", error);
@@ -72,7 +70,7 @@ export async function getActivities(authToken) {
 // Function to fetch user's name
 export const fetchUserName = async () => {
   try {
-    const response = await fetch('/api/user/name');
+    const response = await fetch('https://trail-track-server.fly.dev/api/user/name');
 
     if (response.status !== 200) {
       console.error('Failed to fetch user name:', response.statusText);
