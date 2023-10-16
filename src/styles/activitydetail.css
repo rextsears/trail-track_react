@@ -1,0 +1,50 @@
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    text-align: left;
+}
+h2 {
+    font-size: 30px;
+    margin: 10px 0;
+    text-align: center;
+}
+.map-container {
+    display: flex;
+    width: 100%;
+    height: 500px;
+    border: 5px solid black;
+  }
+.map-space {
+  height: 50px;
+  }
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.map-container, .map-container * {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+section {
+  padding-top: 10px;
+  padding-left: 20px;
+  font-weight: bold;
+  font-style: italic;
+}
+div {
+  width: 100%;
+}
+.map {
+  width: 800px;
+}
+#maptext {
+  font-size: 35px;
+}
